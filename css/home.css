@@ -4,7 +4,7 @@
 :root {
 
     body {
-        background-color: #D6B464;
+        background-color: #ffffff;
     }
 
 }
@@ -84,6 +84,13 @@ li.toggle {
   display: none;
 }
 
+@media (min-width: 769px) {
+  .item.dropdown {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 .toggle .button {
   display: none;
 }
@@ -118,13 +125,13 @@ footer .col-md-3 {
 .box {
   width: 200px;
   height: 200px;
-  background-color: #8B6A2A;
+  background-color: #D6B464;
   border: 2px solid black;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #F3E8C8;
+  color: #946E24;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -142,6 +149,7 @@ footer .col-md-3 {
 
 .categories-section {
   text-align: center;
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -150,6 +158,7 @@ footer .col-md-3 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  color: #CFAE70;
 }
 
 .photo-gallery {
@@ -205,7 +214,8 @@ footer .col-md-3 {
 
 body {
   position: relative;
-  background: linear-gradient(135deg, #000000 0%, #D6B464 100%);
+  /* background: linear-gradient(135deg, #000000 0%, #D6B464 100%); */
+  background-color: #E0D5C0;
 }
 
 body::before {
@@ -254,23 +264,23 @@ a {
   margin: 0 auto;
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 
 .survey-text {
   flex: 2;
+  padding: 0 3rem;
 }
 
 .survey-stats {
   flex: 1;
-  padding-top: 5rem;
 }
 
 .survey-text h3 {
   font-size: 4rem;
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: #CFAE70;
   font-weight: bold;
   line-height: 1.2;
 }
@@ -278,21 +288,21 @@ a {
 .survey-text p {
   font-size: 1.5rem;
   line-height: 1.6;
-  color: #ffffff;
-  max-width: 800px;
+  color: #1C1C1C;
 }
 
 .survey-stats ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 .survey-stats li {
   margin-top: 0.5rem;
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
-  color: #ffffff;
+  color: #CFAE70;
   font-weight: 300;
   white-space: nowrap;
 }
@@ -381,11 +391,6 @@ a {
   }
 }
 
-@media (min-width: 769px) {
-  .item.dropdown {
-    display: none !important; /* Ensure it's hidden on larger screens */
-  }
-}
 
 /* For mobile devices */
 @media (max-width: 480px) {
