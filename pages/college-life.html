@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Title -->
+    <!-- TO DO change to your title -->
+    <title >Class of 2028 Freshman Survey</title>
+
+    <!-- favicon -->
+    <link rel="SHORTCUT ICON" href="https://iili.io/JAYjzEG.png">
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="../css/normalize.css"> <!-- normalize — removes default browser styles -->
+    <!-- see how bootstrap works: https://getbootstrap.com/docs/5.1/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> <!-- Bootstrap — for aligning text columns -->
+    <link rel="stylesheet" href="../css/main.css"> <!-- default styles -->
+    <link rel="stylesheet" href="../css/college-life.css"> <!-- Local stylesheet — put all your design choices here -->
+
+    <!-- Font Awesome — for the social media icons and hamburger menu icon -->
+    <script src="https://kit.fontawesome.com/ea52966d59.js" crossorigin="anonymous"></script>    
+
+        <!-- TO DO: SOCIAL CARDS — editors will help you with this, don't worry about it for now -->
+    <!-- BUT DONT FORGET ABOUT IT or your dom image won't show up on social media/texting -->
+    <!--Open Graph Card for social display (Be sure to change these!)-->
+    <meta property="og:url" content="http://vanderbilthustler.features.com/FreshmanSurvey2028/college-life"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Class of 2028 Freshman Survey | College Life"/> <!-- headline -->
+    <meta property="og:description" content="The Hustler surveys the Class of 2028"/> <!-- abstract -->
+    <meta property="og:site_name" content="The Hustler surveys the Class of 2028">
+    <meta property="og:image" content="https://iili.io/JAaBKSS.jpg"/> <!-- link to dominant image -->
+
+    <!--Twitter Social Card (Be sure to change these!)-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@VandyHustler">
+    <meta name="twitter:creator" content="@VandyHustler">
+    <meta name="twitter:title" content="Class of 2028 Freshman Survey"> <!-- headline -->
+    <meta name="twitter:description" content="The Hustler surveys the Class of 2028"> <!-- abstract -->
+    <meta name="twitter:image" content="https://iili.io/JAaBKSS.jpg"> <!-- dominant image -->
+
+</head>
+<body>
+    <!-- Google Tag Manager -->
+    <!-- (also don't have to worry about this at all) -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NBJX8F" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NBJX8F');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!--Header-->
+  <header>
+
+         <!-- Navbar -->
+            <!-- Navbar -->
+            <nav>
+                <ul>
+                    <li class="logo">
+                        <a href="https://www.vanderbilthustler.com">
+                            <img src="https://iili.io/JAYjzEG.png" alt="JAYjzEG.png" border="0">
+                        <a href="../index.html" id="surveyLink"><h8>| Class of 2028 First Year Survey</h8></a>
+                    </li>
+                    <li class="toggle">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </li>
+                    <li class="item dropdown">
+                        <h9 id="homeLabel">THE SURVEY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h9>
+                        <div class="dropdown-content">
+                        <a href="demographics.html"><h9>DEMOGRAPHICS</h9></a>
+                        <a href="high-school.html"><h9>HIGH SCHOOL</h9></a>
+                        <a href="admissions.html"><h9>ADMISSIONS</h9></a>
+                        <a href="college-life.html"><h9>COLLEGE LIFE</h9></a>
+                        <a href="politics.html"><h9>POLITICS</h9></a>
+                        <a href="lifestyle.html"><h9>LIFESTYLE</h9></a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="methodology.html">
+                            <h9 id="aboutLabel"> ABOUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h9>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        <!-- Headline, subhed -->
+        <!-- feel free to change this up — you don't need it to have data scroll speed, 
+        doesn't have to be centered, doesn't have to be 2 lines, etc. (see header options in css directions for more inspo) -->
+        <h1 data-scroll-speed="2" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">COLLEGE LIFE</h1>
+
+    </header> 
+
+    <script>
+        // Get the anchor element by its ID
+        var surveyLink = document.getElementById('surveyLink');
+    
+        // Check if the screen width is less than or equal to 768px (for mobile devices)
+        if (window.innerWidth <= 768) {
+            surveyLink.innerHTML = '<h8> | Home </h8>'; // Change the text content
+        }
+    </script>
+    
+    <script>
+        // Get the anchor element by its ID
+        var surveyLink = document.getElementById('aboutLabel');
+    
+        // Check if the screen width is less than or equal to 768px (for mobile devices)
+        if (window.innerWidth <= 768) {
+            surveyLink.innerHTML = '<h9> ABOUT&nbsp; </h9>'; // Change the text content
+        }
+    </script>
+
+    <script>
+        // Get the anchor element by its ID
+        var surveyLink = document.getElementById('homeLabel');
+
+        // Check if the screen width is less than or equal to 768px (for mobile devices)
+        if (window.innerWidth <= 768) {
+            surveyLink.innerHTML = '<h9> THE SURVEY&nbsp; </h9>'; // Change the text content
+        }
+    </script>
+
+
+    <!-- main article -->
+    <main>
+        <article class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 story"> 
+                    <p><small><em>Vanderbilt students having fun in the snow, as photographed on Jan. 10, 2025. (Hustler Multimedia/Alondra Moya)</em></small></p> 
+                    <p>The majority of the Class of 2028 (58%) applied to the College of Arts and Science, followed by 24% to the School of Engineering, 11% to Peabody College and 7% to the Blair School of Music.</p>
+
+                    <section class="box-container">
+                        <div class="box" onclick="changeChart0('24QUJ', '1');">
+                            <h5>COLLEGE SWITCH</h5>
+                        </div>
+                        <!-- <div class="box" onclick="changeChart0('yXEoG','1');">
+                            <h5>CHANGES SINCE 2027</h5>
+                        </div> -->
+                    </section>
+                    
+                    <section class="graph-container">
+                        <figure class="big-image">
+                            <div class="chart-container" id="chartContainer1"></div>
+                        </figure>
+                    </section>
+
+                    <p>More than 87% of students indicated that they do not intend to switch to another college at Vanderbilt. Peabody College experienced the highest post-acceptance switch rate, rising from 11% to 18%, while the College of Arts and Science saw a drop to 51%, followed by a small decrease at the Blair School of Music.</p>
+                    
+                    <p>Sixty percent of the Class of 2028 are not on a pre-professional track, while the remaining 40% are on pre-professional tracks. Over 25% reported that they are on the pre-med track, followed by 12% on the pre-law track. For intended majors, 20% indicated interest in economics, followed by 9% in mechanical engineering and 8% in human and organizational development.</p>
+
+                    <p>Compared to the previous class, the Class of 2028 reported higher interest in the pre-med track and less interest in the pre-law track.</p>
+
+                    <section class="box-container">
+                        <div class="box" onclick="changeChart0('CrZcW','2');">
+                            <h5>PRE-PROFESSIONAL BREAKDOWN</h5>
+                        </div>
+                    </section>
+                    
+                    <section class="graph-container">
+                        <figure class="big-image">
+                            <div class="chart-container" id="chartContainer2"></div>
+                        </figure>
+                    </section>
+
+                    <p>First-year Vivian Lee reflected on her choice to major in chemical engineering, saying that the experience has been “a little rocky,” but she hopes to learn more about the field through her classes.</p>
+
+                    <p>“I went ahead and declared my major for now as chemical engineering, but I'm still figuring things out, as Gen[eral] Chem[istry] has been a struggle for me as much as everyone else,” Lee said. “With this in mind, I do not want to rely solely on my major in case I want to make changes in my educational plans, so I intend to minor in digital fabrication and hopefully [computer science], depending on how I feel after more classes and experience.” </p>
+
+                    <h3>COMMONS HOUSES</h3>
+                    
+                    <p>More than 17% of students reported they live in Hank Ingram House, followed closely by North House and Gillette House with 15% each. Forty-two percent of the Class of 2028 said they wished they lived in Hank, followed by 16% for Stambaugh House.</p>
+
+                    <p>Lee said she had a great experience living in Hank.</p>
+
+                    <p>“[Hank is] usually kept pretty clean, and I am really happy with my floor-mates. The common room spaces are nice study spots, and the basement is a great plus for having a little fun time with people,” Lee said. “Because of how big it is, I feel like the community could be tighter.”</p>
+
+                    <p>First-year Mary Hallgarth reflected on her favorite things about living in Crawford House.</p>
+
+                    <p>“I live on the third floor of Crawford, which has a colored floor design that initially confused me, but I’ve grown to love it,” Hallgarth said. “Our floor is divided into two social groups, but everyone is close in different ways. [We have] great study spaces, high ceilings and nice bathrooms.”</p>
+
+                    <h3>FINANCIAL AID</h3>
+
+                    <p>According to the results, 44% of first-year students did not receive financial aid. On the other hand, 24% of students received financial aid that covered more than half of their cost of attendance, and 26% had full cost of attendance covered through financial aid.</p>
+
+                    <p>A significant portion of the class (74%) did not receive merit-based awards, while 26% of students were awarded either full or partial merit scholarships. Approximately 73% of students reported that they will graduate without any student loans. However, 10% of students remain uncertain about how much they will owe upon graduation.</p>
+
+                    <p>Lee emphasized the significant impact of receiving need-based financial aid through the QuestBridge scholarship. </p>
+
+                    <p>“Being able to receive this scholarship has been the prime reason I am able to attend Vanderbilt right now, and I am beyond grateful,” Lee said. “Not only does getting my full needs covered allow me to attend Vanderbilt and get the education I've always wanted, but it also allows room for me to have a memorable and enjoyable college experience without added financial stress.”</p>
+
+                    <section class="box-container">
+                        <div class="box" onclick="changeChart0('3r2or','3');">
+                            <h5>FINANCIAL AID</h5>
+                        </div>
+                        <!-- <div class="box" onclick="changeChart0('AGZ1T','3');">
+                            <h5>MERIT SCHOLARS BY INCOME</h5>
+                        </div>
+                        <div class="box" onclick="changeChart0('Iy6Ph','3');">
+                            <h5>MERIT SCHOLARS BY STATE</h5>
+                        </div> -->
+                    </section>
+                    
+                    <section class="graph-container">
+                        <figure class="big-image">
+                            <div class="chart-container" id="chartContainer3"></div>
+                        </figure>
+                    </section>
+
+                    <p>Twelve percent of merit scholars are from Tennessee, followed by 10% from California. Those with household incomes of $100,000 to $149,999 received the most merit scholarships. The lowest portion of students receiving merit scholarships were students with household incomes of $50,000 to $74,999.</p>
+
+                    <section class="box-container">
+                        <div class="box" onclick="changeChart0('AGZ1T','4');">
+                            <h5>MERIT SCHOLARSHIP AND FAMILY INCOME</h5>
+                        </div>
+                        <div class="box" onclick="changeChart0('Iy6Ph','4');">
+                            <h5>MERIT SCHOLARSHIP AND LOCATION</h5>
+                        </div>
+                    </section>
+
+                    <section class="graph-container">
+                        <figure class="big-image">
+                            <div class="chart-container" id="chartContainer4"></div>
+                        </figure>
+                    </section>
+
+                    <h3>GREEK LIFE</h3>
+
+                    <p>Around 45% of the Class of 2028 reported that they did not plan to participate in Greek life, while 35% were unsure. The remaining 20% of students planned to participate in IFC, Panhellenic or NPHC recruitment.
+                    </p>
+                    
+                    <!-- <section class="graph-container">
+                        <figure class="big-image">
+                            <div class="chart-container" id="chartContainer4"></div>
+                        </figure>
+                    </section> -->
+
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        function changeChart0(chartId, containerId) {
+            var container = document.getElementById('chartContainer' + containerId);
+            container.innerHTML = '';
+            var script = document.createElement('script');
+            script.src = 'https://datawrapper.dwcdn.net/' + chartId + '/embed.js';
+            script.async = true;
+            container.appendChild(script);
+        } 
+
+        function firstGraph() {
+            changeChart0('24QUJ', '1');
+            changeChart0('CrZcW', '2');
+            changeChart0('3r2or', '3');
+            changeChart0('AGZ1T', '4');
+        }
+
+        window.onload = firstGraph();
+    </script>
+
+<footer>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3 text-center">
+                <a href="https://www.vanderbilthustler.com">
+                    <img src="https://iili.io/JAYjzEG.png" alt="JAYjzEG.png" class="footer-logo">
+                </a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <a href="methodology.html">
+                    <h7>ABOUT THE PROJECT</h7>
+                </a>
+                <p style="margin-top: 10px; color: white;"><small>&copy; Copyright 2025 The Vanderbilt Hustler</small></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/ids.js"></script>
+</body>
+</html>
