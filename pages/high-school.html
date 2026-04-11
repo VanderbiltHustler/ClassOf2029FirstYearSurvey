@@ -136,7 +136,7 @@
     
                 <p><small><em>Undergraduate Admissions Office Behind E. Bronson Ingram College, as photographed on Aug. 27, 2024. (Hustler Multimedia/Nafees-ul Haque)</em></small></p>
 
-
+                <h3>COLLEGE-LEVEL CLASSWORK</h3>
 
                 <p>
                     A large majority of respondents reported taking advanced coursework during high school. Approximately 78% of students said they took at least one honors course. Advanced Placement courses were even more common among respondents, with about 85% reporting that they took at least one AP course in high school. In contrast, International Baccalaureate coursework was less common, with only around 12% of respondents reporting that they took at least one IB course. Dual enrollment courses were also common among respondents, with 40% of respondents having taken one in high school.  
@@ -148,6 +148,8 @@
                         <div class="chart-container" id="chartContainer1"><script type="text/javascript" charset="utf-8"></script></div>
                     </figure>
                 </section>
+
+                <h3>EXTRACURRICULARS</h3>
 
                 <p>
                     Students were also asked about the extracurricular activities they participated in during high school. Community service was the most reported activity, followed by academic clubs or athletics. Other common activities included paid work, student government, career-oriented internships or research opportunities and cultural or identity-based organizations, speech and debate, visual arts, journalism, theater, dance or religious groups.  
@@ -176,8 +178,10 @@
                     “I was involved in research in high school and I’ve continued that here,” Wang said. 
                 </p>
 
+                <h3>CAREER INTEREST</h3>
+
                 <section class="box-container">
-                    <div class="box" onclick="changeChart0('', '3')">
+                    <div class="box" onclick="showFlourish3()">
                         <h5>HIGH SCHOOL TYPE BY CAREER</h5>
                     </div>
                     <div class="box" onclick="changeChart0('cQmRh', '3')">
@@ -215,6 +219,10 @@
     function setIframe(html, containerId) {
         var container = document.getElementById('chartContainer' + containerId);
         container.innerHTML = html;
+    }
+
+    function showFlourish3() {
+        setIframe("<iframe src='https://flo.uri.sh/visualisation/27416611/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>", '3');
     }
 
     function firstGraph() {
