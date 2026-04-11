@@ -136,18 +136,12 @@
     
                 <p><small><em>Undergraduate Admissions Office Behind E. Bronson Ingram College, as photographed on Aug. 27, 2024. (Hustler Multimedia/Nafees-ul Haque)</em></small></p>
 
+
+
                 <p>
-                    According to the survey, 85% of students took some form of advanced class, such as AP,  IB, honors or dual enrollment. Eighty-seven percent of students said their school offered AP classes, 19% of students’ schools offered IB classes, 82% of students’ schools offered honors classes and 60% of students’ schools offered dual enrollment classes. Matus said she took 6 AP classes, which was the maximum allowed number at her school, and 45 college credits worth of dual enrollment courses. 
-                </p>
-                <p>
-                    “I knew that taking these courses would help me stand out to colleges, as well as potentially allow me to graduate early. Now at Vandy, I am able to graduate an entire year early,” Matus said. “Where I lived, dual credit courses were only $75 per credit, and we received $4,125 [from the school] to use toward college credits. This allowed me to save thousands of dollars.” 
+                    A large majority of respondents reported taking advanced coursework during high school. Approximately 78% of students said they took at least one honors course. Advanced Placement courses were even more common among respondents, with about 85% reporting that they took at least one AP course in high school. In contrast, International Baccalaureate coursework was less common, with only around 12% of respondents reporting that they took at least one IB course. Dual enrollment courses were also common among respondents, with 40% of respondents having taken one in high school.  
                 </p>
                 
-                <section class="box-container">
-                    <div class="box" onclick="changeChart0('LqHDj', '1');">
-                        <h5>ADVANCED CLASSES</h5>
-                    </div>
-                </section>
                 
                 <section class="graph-container">
                     <figure class="big-image">
@@ -156,23 +150,52 @@
                 </section>
 
                 <p>
-                    Students participated in a variety of extracurricular activities in high school, with the top five being community service (87%), academic clubs/competition (75%), athletics (62%), paid work (46%) and music (37%). First-year Annie Shi discussed her role as president of her high school’s Chinese club for two years.
+                    Students were also asked about the extracurricular activities they participated in during high school. Community service was the most reported activity, followed by academic clubs or athletics. Other common activities included paid work, student government, career-oriented internships or research opportunities and cultural or identity-based organizations, speech and debate, visual arts, journalism, theater, dance or religious groups.  
                 </p>
-                <p>
-                    “We had approximately 15-20 members, and most of us were inspired to join because of our Chinese teacher, who made learning the language and culture accessible to everyone. As a group, we would perform during festivals and fundraise for a local homeless shelter,” Shi said. “The club allowed me to form connections with others outside my classes, and it gave us the ability to leave a positive impact on the community around us.”
-                </p>
-
-                <section class="box-container">
-                    <div class="box" onclick="changeChart0('YBZ8u','2');">
-                        <h5>EXTRACURRICULARS</h5>
-                    </div>
-                </section>
                 
                 <section class="graph-container">
                     <figure class="big-image">
                         <div class="chart-container" id="chartContainer2"><script type="text/javascript" charset="utf-8"></script></div>
                     </figure>
                 </section>
+
+                <p>
+                    Across most intended career tracks, pre-professional and career-oriented activities accounted for the largest share of high school involvement. Students interested in fields such as engineering, health, finance, law and business were especially likely to report participating in these activities prior to college. Civic engagement and service-oriented work remained consistent across career interests, while creative, media and athletic activities represented smaller shares of reported involvement. 
+                </p>
+
+                <p>
+                    For many students, these interests carried over into their first year at Vanderbilt, though often in adapted forms.  
+                </p>
+                <p>
+                    “I still volunteer, just in different ways — before I tutored. Now I volunteer at a hospital,” Shepp said.  
+                </p>
+                <p>
+                    Other students emphasized continuity, particularly academically aligned activities.  
+                </p>
+                <p>
+                    “I was involved in research in high school and I’ve continued that here,” Wang said. 
+                </p>
+
+                <section class="box-container">
+                    <div class="box" onclick="changeChart0('', '3')">
+                        <h5>HIGH SCHOOL TYPE BY CAREER</h5>
+                    </div>
+                    <div class="box" onclick="changeChart0('cQmRh', '3')">
+                        <h5>CAREER SECTOR INTEREST</h5>
+                    </div>
+                </section>
+
+                <section class="graph-container">
+                    <figure class="big-image">
+                        <div class="chart-container" id="chartContainer3"></div>
+                    </figure>
+                </section>
+
+                <p>
+                    The survey data also suggests that a student’s high school environment is correlated with their intended career path. Parochial school students were notably more prevalent in health fields, while private school students leaned toward finance and business. Public school students were the most evenly distributed across sectors.
+                </p>
+
+
             </div>
             </div>
     </article>
@@ -187,16 +210,17 @@
         script.src = 'https://datawrapper.dwcdn.net/' + chartId + '/embed.js';
         script.async = true;
         container.appendChild(script);
+    }
 
-    } 
+    function setIframe(html, containerId) {
+        var container = document.getElementById('chartContainer' + containerId);
+        container.innerHTML = html;
+    }
 
     function firstGraph() {
-        // Call the changeChart function with the chartId for 'GENDER'
-        changeChart0('LqHDj', '1');
-        changeChart0('YBZ8u', '2');
-        changeChart0('xbZUZ', '3');
-        changeChart0('kPIlA', '4');
-
+        changeChart0('zCMpx', '1');
+        changeChart0('uliEM', '2');
+        setIframe("<iframe src='https://flo.uri.sh/visualisation/27416611/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>", '3');
     }
 
     window.onload = firstGraph();
