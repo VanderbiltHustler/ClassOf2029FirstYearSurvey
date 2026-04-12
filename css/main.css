@@ -483,6 +483,41 @@ nav li a:hover, nav li a:active {
 }
 
 /*
+    PAGE NAVIGATION
+*/
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-top: 3.0em;
+    margin-bottom: 3.0em;
+}
+.page-nav a {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #D6B464;
+    text-decoration: none;
+    border-bottom: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.page-nav a:hover, .page-nav a:active {
+    color: #b8963e;
+    border-bottom: none;
+}
+.page-nav a:visited {
+    color: #D6B464;
+    border-bottom: none;
+}
+.page-nav-placeholder {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/*
     FOOTER
 */
 footer {
