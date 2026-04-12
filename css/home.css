@@ -96,6 +96,33 @@ li.toggle {
 }
 
 
+.word-cloud {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.word-cloud-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #CFAE70;
+  margin-bottom: 1.5rem;
+}
+
+#wordCloudCanvas {
+  display: block;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .word-cloud {
+    padding: 2rem 1rem 1rem;
+  }
+}
+
 footer {
   margin-top: 0px;
 }

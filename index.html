@@ -143,9 +143,8 @@
 
 <!-- Word Cloud Section -->
 <div class="word-cloud">
-
-  <!-- freewordcloudgenerator.com -->
-
+  <h3 class="word-cloud-title">What are 1-2 words that you hope will describe your Vanderbilt experience?</h3>
+  <canvas id="wordCloudCanvas"></canvas>
 </div>
 
 
@@ -205,7 +204,204 @@
 </footer>
 
 <!-- Jquery CDN -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-<script src="js/ids.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/ids.js"></script>
+
+<!-- Word Cloud -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js"></script>
+<script>
+  // Replace these words and weights with your real survey data.
+  // Format: ['word', frequency_number]
+  var wordData = [
+    ['fun', 47],
+    ['exciting', 27],
+    ['fulfilling', 14],
+    ['growth', 12],
+    ['enlightening', 9],
+    ['meaningful', 9],
+    ['rewarding', 8],
+    ['memorable', 7],
+    ['enriching', 6],
+    ['transformative', 6],
+    ['community', 5],
+    ['successful', 5],
+    ['unique', 5],
+    ['challenging', 4],
+    ['educational', 4],
+    ['happy', 4],
+    ['insightful', 4],
+    ['inspiring', 4],
+    ['interesting', 4],
+    ['adventurous', 3],
+    ['friendship', 3],
+    ['immersive', 3],
+    ['life-changing', 3],
+    ['productive', 3],
+    ['spontaneous', 3],
+    ['stressful', 3],
+    ['adventure', 2],
+    ['belonging', 2],
+    ['busy', 2],
+    ['diverse', 2],
+    ['energetic', 2],
+    ['engaging', 2],
+    ['evolving', 2],
+    ['explorative', 2],
+    ['formative', 2],
+    ['friendly', 2],
+    ['fun!', 2],
+    ['hard', 2],
+    ['impactful', 2],
+    ['knowledge', 2],
+    ['learning', 2],
+    ['lively', 2],
+    ['new', 2],
+    ['new experiences', 2],
+    ['overwhelming', 2],
+    ['relationships', 2],
+    ['welcoming', 2],
+    ['academically rewarding', 1],
+    ['accomplishment', 1],
+    ['amazing', 1],
+    ['awesome stressful', 1],
+    ['balance', 1],
+    ['balanced', 1],
+    ['beautiful', 1],
+    ['blessed', 1],
+    ['blessing', 1],
+    ['busy but free', 1],
+    ['challengin', 1],
+    ['changing', 1],
+    ['chill', 1],
+    ['chud life', 1],
+    ['collaborative', 1],
+    ['college gameday', 1],
+    ['colorful', 1],
+    ['connected', 1],
+    ['cool', 1],
+    ['daring', 1],
+    ['developing', 1],
+    ['different', 1],
+    ['disappointing', 1],
+    ['discovery', 1],
+    ['dream', 1],
+    ['educative', 1],
+    ['elevating', 1],
+    ['encouraging', 1],
+    ['enjoyable', 1],
+    ['entertaining', 1],
+    ['enthusiastic', 1],
+    ['enticing', 1],
+    ['eventful', 1],
+    ['everlasting', 1],
+    ['excellent', 1],
+    ['excited', 1],
+    ['exhilarating', 1],
+    ['exiciting', 1],
+    ['expectation-exceeding', 1],
+    ['experiential', 1],
+    ['expiriences', 1],
+    ['exploration', 1],
+    ['exploring', 1],
+    ['extraordinary', 1],
+    ['eye-opening', 1],
+    ['fantabulous', 1],
+    ['fantastic', 1],
+    ['fast growth', 1],
+    ['freaky', 1],
+    ['freeing', 1],
+    ['friends', 1],
+    ['fruitful', 1],
+    ['fulfilled', 1],
+    ['good', 1],
+    ['good struggle', 1],
+    ['hostile', 1],
+    ['iconic', 1],
+    ['important', 1],
+    ['indescribable', 1],
+    ['ineffably memorable', 1],
+    ['influential', 1],
+    ['informative', 1],
+    ['integrated', 1],
+    ['interdisciplinary', 1],
+    ['involved', 1],
+    ['irrepproachable', 1],
+    ['job', 1],
+    ['lit party', 1],
+    ['lonely', 1],
+    ['memories', 1],
+    ['mind-opening', 1],
+    ['monumental', 1],
+    ['motivating', 1],
+    ['national champions', 1],
+    ['open-minded', 1],
+    ['opportune', 1],
+    ['opportunity', 1],
+    ['overstimulated', 1],
+    ['party', 1],
+    ['perfect', 1],
+    ['positive', 1],
+    ['professional', 1],
+    ['refreshing', 1],
+    ['rememberable', 1],
+    ['resourceful', 1],
+    ['rewarding successful', 1],
+    ['rigorous', 1],
+    ['riveting', 1],
+    ['scary', 1],
+    ['self-discovery', 1],
+    ['shaping', 1],
+    ['social', 1],
+    ['something', 1],
+    ['somewhat eventful', 1],
+    ['soul-searching', 1],
+    ['success', 1],
+    ['supercalifragilisticexpialidicious', 1],
+    ['supportive', 1],
+    ['surprising', 1],
+    ['thrilling', 1],
+    ['transformational', 1],
+    ['tumultuously satisfying', 1],
+    ['unbelievable', 1],
+    ['unforgettable', 1],
+    ['unrooted', 1],
+    ['unsure', 1],
+    ['uplifting', 1],
+    ['usa', 1],
+    ['vivacious', 1],
+    ['widespread growth', 1],
+    ['wild', 1],
+    ['work', 1],
+    ['worthwhile', 1]
+  ];
+
+  var colors = ['#CFAE70', '#D6B464', '#946E24', '#E8D08A', '#B89040'];
+
+  function drawWordCloud() {
+    var canvas = document.getElementById('wordCloudCanvas');
+    var container = canvas.parentElement;
+    canvas.width = container.offsetWidth;
+    canvas.height = Math.min(container.offsetWidth * 0.75, 700);
+
+    WordCloud(canvas, {
+      list: wordData,
+      gridSize: Math.round(16 * canvas.width / 1024),
+      weightFactor: function(size) {
+        return Math.pow(size, 0.8) * canvas.width / 120;
+      },
+      fontFamily: 'Times New Roman, serif',
+      color: function() {
+        return colors[Math.floor(Math.random() * colors.length)];
+      },
+      backgroundColor: 'transparent',
+      rotateRatio: 0.3,
+      rotationSteps: 2,
+      shuffle: true
+    });
+  }
+
+  window.addEventListener('load', drawWordCloud);
+  window.addEventListener('resize', drawWordCloud);
+</script>
 </body>
 </html>
