@@ -3,6 +3,10 @@
     These are the default styles for the buildout.
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
 /* natural box model */
 html {
     box-sizing: border-box;
@@ -45,7 +49,7 @@ p {
 
 }
 h1, h2, h3, h11, .bylines p, footer p {
-    font-family: 'Libre Franklin';
+    font-family: 'Playfair Display';
     font-weight: 850;
 }
 h1, h2, h11 {
@@ -72,6 +76,7 @@ h2 { /* second headline */
     margin-top: -2.2em; /* Adjust the value to move the text up */
     line-height: 1; /* Reduce line height to bring the text up */
     padding: 0; /* Reset padding to remove any extra space */
+    font-family: 'Playfair Display'
 }
 h3 { /* section header */
     font-size: 28px;
@@ -94,6 +99,7 @@ h5 { /* box head */
     text-align: center;
     font-size: bold;
     color: #ffffff;
+    font-family: 'Libre Franklin';
 
 }
 
@@ -116,7 +122,7 @@ h7 { /* footer2 */
 }
 
 h8 { /* footer2 */
-    font-family: 'Georgia', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 18px;
@@ -126,11 +132,11 @@ h8 { /* footer2 */
 }
 
 h9 { /* navbar */
-    font-weight: 400;
+    font-weight: 500;
     font-size: 18px;
     line-height: 18px;
     top: 5.8px;
-    font-family: 'Georgia', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 h10 { /* text box head */
@@ -554,6 +560,10 @@ footer {
     width: 100%; /* or specify a fixed width in pixels */
     height: auto; /* or specify a fixed height in pixels */
     /* other styles */
+}
+
+.survey-stats li {
+    font-family: 'Playfair Display'
 }
 
 /* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
